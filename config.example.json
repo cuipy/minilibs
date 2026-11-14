@@ -1,0 +1,15 @@
+{
+  "gameDir": "miniprogram-webgl",
+  "deviceOrientation": "portrait",
+  "defaultBenchmarkLevel": 30,
+  "platforms": {
+    "weixin": {
+      "appid": "wx你的AppID",
+      "projectname": "你的微信项目名"
+    },
+    "douyin": {
+      "appid": "tt你的AppID",
+      "projectname": "你的抖音项目名"
+    }
+  }
+}

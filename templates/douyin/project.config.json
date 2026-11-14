@@ -1,0 +1,11 @@
+{
+  "description": "贪吃蛇小游戏 - 抖音小游戏端（WebGL 渲染）",
+  "appid": "",
+  "projectname": "",
+  "setting": {
+    "es6": true,
+    "urlCheck": false,
+    "autoCompile": true,
+    "compileHotReLoad": true
+  }
+}
