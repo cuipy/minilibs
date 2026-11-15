@@ -1,0 +1,14 @@
+# 实际配置（含各平台 appid），不入库，只提交 config.example.json
+config.json
+
+# 临时产物
+temp/
+tmp_*
+
+# 依赖与构建产物
+node_modules/
+
+# 操作系统与编辑器杂物
+.DS_Store
+Thumbs.db
+desktop.ini
