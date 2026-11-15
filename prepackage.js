@@ -117,10 +117,16 @@ function projectConfigText(name) {
 // 屏幕方向只影响开发者工具与真机的显示方向，不参与游戏逻辑。
 // 不配置就是竖屏；某个平台单独写了就覆盖全局值。
 const ORIENTATIONS = ['portrait', 'landscape'];
+// 允许在配置里用拼音填写屏幕方向（记不住英文时），打包时自动翻成英文。
+const ORIENT_PINYIN = { shuping: 'portrait', hengping: 'landscape' };
+function normalizeOrientation(v) {
+  if (v == null) return v;
+  return ORIENT_PINYIN[String(v).toLowerCase()] || v;
+}
 
 function orientationOf(name) {
   const p = cfg.platforms[name] || {};
-  const value = p.deviceOrientation || cfg.deviceOrientation || 'portrait';
+  const value = normalizeOrientation(p.deviceOrientation || cfg.deviceOrientation || 'portrait');
   if (ORIENTATIONS.indexOf(value) < 0) {
     fail('deviceOrientation 只能是 portrait 或 landscape，当前是：' + value + '（平台：' + name + '）');
   }

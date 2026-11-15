@@ -7,5 +7,10 @@
     "urlCheck": false,
     "autoCompile": true,
     "compileHotReLoad": true
+  },
+  "packOptions": {
+    "ignore": [
+      { "type": "folder", "value": "tools" }
+    ]
   }
 }
